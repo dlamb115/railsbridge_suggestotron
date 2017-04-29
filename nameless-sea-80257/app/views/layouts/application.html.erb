@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suggestotron</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<img src="http://i.imgur.com/MQHYB.jpg" height="150" />
+<% flash.each do |name, message| %>
+    <div><%= message %></div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
